@@ -37,13 +37,6 @@ Each dataset is included in this repository with corresponding preprocessing scr
 
 ## Running the Code
 
-### Requirements
-
-To install the required libraries:
-
-```bash
-pip install -r requirements.txt
-```
 
 ### Instructions
 
