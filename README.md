@@ -1,47 +1,77 @@
-Code Repository for "Enhancing Text Classification through LLM-Driven Active Learning and Human Annotation"
-Overview
-This repository contains the Jupyter Notebook (.ipynb) files for the experiments and analyses presented in our paper. It includes distinct codes for each dataset, as well as scripts for Few-Shot and Zero-Shot learning methods, API connections, prompt designs, and result visualization.
+# Enhancing Text Classification through LLM-Driven Active Learning and Human Annotation
 
-Datasets
-Our study utilizes three distinct datasets:
+This repository contains the official implementation, experimental notebooks, and supplemental materials for our paper presented at the **18th Linguistic Annotation Workshop (LAW-XVIII), 2024**.
 
-Fake News Dataset: This dataset includes annotations from GPT-3.5. However, for replicating our experiments, you can ignore these columns.
-Movie Genre Dataset: Similar to the Fake News dataset, it includes GPT-3.5 annotations which are not necessary for replication.
-IMDB Movies Dataset: This dataset also contains additional GPT-3.5 annotations. Ignore these for experiment replication.
-Each dataset has a unique structure and characteristics, detailed in the corresponding Jupyter Notebook files.
+**Authors:**
+- [Hamidreza Rouzegar](mailto:hamidreza.rouzegar@ontariotechu.net)
+- [Masoud Makrehchi](mailto:masoud.makrehchi@ontariotechu.ca)
 
-Code Files
-Dataset-Specific Codes
-Fake News Code: fake_news_code.ipynb
+## Overview
 
-Purpose: To apply the active learning model to the Fake News dataset.
-Customization: Requires minor adjustments for different methods discussed in the paper.
-Movie Genre Code: movie_genre_code.ipynb
+We introduce a novel methodology integrating human annotators and GPT-3.5 annotations within an Active Learning framework for text classification. This approach significantly reduces annotation costs while maintaining or improving classification accuracy.
 
-Designed for the Movie Genre dataset with similar customization requirements.
-IMDB Movies Code: imdb_movies_code.ipynb
+## Paper Information
 
-Tailored for the IMDB Movies dataset with slight modifications as per the discussed methods.
-Few-Shot and Zero-Shot Learning Codes
-Few-Shot Learning Code: few_shot_learning.ipynb
+- **Anthology ID:** [2024.law-1.10](https://aclanthology.org/2024.law-1.10/)
+- **Conference:** 18th Linguistic Annotation Workshop (LAW-XVIII)
+- **Date & Location:** March 22, 2024, St. Julians, Malta
+- [Paper Link](https://aclanthology.org/2024.law-1.10.pdf)
 
-Demonstrates the implementation of Few-Shot learning methods.
-Details on API connection and prompt design.
-Zero-Shot Learning Code: zero_shot_learning.ipynb
+## Datasets
 
-Illustrates the Zero-Shot learning approach.
-Includes API connection instructions and prompt formulation.
-Visualization Code
-Plotting Results: plot_results.ipynb
-Used for visualizing the results of the experiments.
-Provides various plotting functions and styles for effective representation.
-Usage
-To replicate the experiments or to conduct new ones using the provided codes:
+We evaluated our methodology using the following datasets:
 
-Choose the respective notebook file for the dataset you are interested in.
-If necessary, make minor adjustments to the code based on the methods discussed in the paper.
-For Few-Shot and Zero-Shot learning approaches, refer to the corresponding notebooks for detailed guidelines on API connections and prompt designs.
-Use the plot_results.ipynb for visualizing your findings.
-Note
-The annotations from GPT-3.5 in the datasets are for additional insights but are not essential for replicating the experiments described in our paper.
-Ensure you have the necessary packages and environments set up as per the requirements mentioned at the beginning of each notebook.
+- **IMDB Reviews**: Binary sentiment classification (positive/negative).
+- **Fake News**: Binary classification for detecting fake vs. authentic news articles.
+- **Movie Genres**: Multi-label genre classification based on movie plots.
+
+Each dataset is included in this repository with corresponding preprocessing scripts and experimental notebooks.
+
+## Repository Structure
+
+- `Fake News Code.ipynb`: Active learning experiments on the Fake News dataset.
+- `Zero shot.ipynb`: Demonstrates zero-shot annotation using GPT-3.5.
+- `Few-shot learning.ipynb`: Implements few-shot annotation methods.
+- `New_Few_fake_news.csv`, `New_Few_movies_genre.pkl`, `New_Few_fake_news.csv`: Dataset files.
+- `README.md`: Documentation and repository details.
+
+## Running the Code
+
+### Requirements
+
+To install the required libraries:
+
+```bash
+pip install -r requirements.txt
+```
+
+### Instructions
+
+- Run dataset-specific notebooks (e.g., `Fake News Code.ipynb`) for detailed experimental results.
+- Refer to `Zero shot.ipynb` and `Few-shot learning.ipynb` for guidance on prompt design and GPT-3.5 API usage.
+- Use provided scripts for visualizing experimental outcomes (`plot_results.ipynb`).
+
+## Citation
+
+If you use our work, please cite:
+
+```bibtex
+@article{rouzegar2024enhancing,
+  title={Enhancing text classification through llm-driven active learning and human annotation},
+  author={Rouzegar, Hamidreza and Makrehchi, Masoud},
+  journal={arXiv preprint arXiv:2406.12114},
+  year={2024}
+}
+```
+
+## Contact
+
+For questions or further collaboration, please reach out to:
+
+- Hamidreza Rouzegar ([hamidreza.rouzegar@ontariotechu.net](mailto:hamidreza.rouzegar@ontariotechu.net))
+- Masoud Makrehchi ([masoud.makrehchi@ontariotechu.ca](mailto:masoud.makrehchi@ontariotechu.ca))
+
+## License
+
+This repository is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+
